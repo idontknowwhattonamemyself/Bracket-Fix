@@ -21,7 +21,7 @@ Video of me showing off the ui: https://www.youtube.com/watch?v=wHn6xTdsiiU
 Example usage of the ui: 
 
 ```
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/WetCheezit/Bracket-V2/main/src.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/idontknowwhattonamemyself/Bracket-Fix/main/src.lua"))()
 
 -- Window
 local Window, MainGUI = Library:CreateWindow("Bracket-V2")
