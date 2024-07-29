@@ -444,7 +444,7 @@ function Library:CreateWindow(title, color)
                 -- Toggle Code
                 local ToggleCallback = callback
 
-                game.RunService.Heartbeat:Connect(function()
+                game:GetService("RunService").Heartbeat:Connect(function()
                     if (checkbox.BackgroundColor3 == oldcolor) then
                         checkbox.BackgroundColor3 = color
                     end
@@ -526,7 +526,7 @@ function Library:CreateWindow(title, color)
                         bindtext.Text = "[ ... ]"
                     end)
 
-                    game.RunService.Heartbeat:Connect(function()
+                    game:GetService("RunService").Heartbeat:Connect(function()
                         if (WaitingForBind == false) then
                             if (Clicked == true) then
                                 WaitingForBind = true
@@ -1111,7 +1111,7 @@ function Library:CreateWindow(title, color)
                             ColorInput:Disconnect()
                         end
 
-                        ColorInput = game.RunService.RenderStepped:Connect(function()
+                        ColorInput = game:GetService("RunService").RenderStepped:Connect(function()
                             local ColorX = (math.clamp(Mouse.X - colorslider.AbsolutePosition.X, 0, colorslider.AbsoluteSize.X) / colorslider.AbsoluteSize.X)
                             local ColorY = (math.clamp(Mouse.Y - gradient.AbsolutePosition.Y, 0, gradient.AbsoluteSize.Y) / gradient.AbsoluteSize.Y)
 
@@ -1143,7 +1143,7 @@ function Library:CreateWindow(title, color)
                             HueInput:Disconnect()
                         end
 
-                        HueInput = game.RunService.RenderStepped:Connect(function()
+                        HueInput = game:GetService("RunService").RenderStepped:Connect(function()
                             local HueY = (math.clamp(Mouse.X - colorslider.AbsolutePosition.X, 0, colorslider.AbsoluteSize.X) / colorslider.AbsoluteSize.X)
 
                             bar_2.Position = UDim2.new(HueY, 0, 0, 0)
